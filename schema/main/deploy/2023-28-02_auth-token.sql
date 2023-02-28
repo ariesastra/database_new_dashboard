@@ -5,8 +5,6 @@ BEGIN;
 CREATE TABLE main.auth_token (
   id                TEXT NOT NULL,
   user_id           TEXT NOT NULL,
-  source_id         TEXT,
-  source            TEXT,
   refresh_token     TEXT,
   created_at        TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
   created_by        TEXT NOT NULL DEFAULT 'system',
@@ -16,7 +14,6 @@ CREATE TABLE main.auth_token (
 );
 
 CREATE INDEX IF NOT EXISTS idx_auth_token_user_id ON main.auth_token (user_id);
-CREATE INDEX IF NOT EXISTS idx_auth_token_source_id ON main.auth_token (source_id);
 CREATE INDEX IF NOT EXISTS idx_auth_token_refresh_token ON main.auth_token (refresh_token);
 
 COMMIT;
