@@ -2,6 +2,6 @@
 
 BEGIN;
 
-DROP TABLE IF EXIST main.users;
+DROP TABLE IF EXISTS main.users;
 
 COMMIT;

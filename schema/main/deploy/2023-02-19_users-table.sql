@@ -4,7 +4,8 @@ BEGIN;
 
 CREATE TABLE main.users (
   id                  TEXT NOT NULL,
-  email               TEXT NOT NULL,
+  email               TEXT NOT NULL UNIQUE,
+  password            TEXT NOT NULL,
   full_name           TEXT DEFAULT NULL,
   gender              TEXT DEFAULT NULL,
   access              TEXT NOT NULL,
