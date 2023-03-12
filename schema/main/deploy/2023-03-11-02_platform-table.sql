@@ -3,8 +3,8 @@
 BEGIN;
 
 CREATE TABLE IF NOT EXISTS main.platform (
-  id            TEXT NOT NULL PRIMARY KEY,
-  platform_name TEXT NOT NULL,
+  id                TEXT NOT NULL PRIMARY KEY,
+  platform_name     TEXT UNIQUE NOT NULL,
   created_at        TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
   created_by        TEXT NOT NULL DEFAULT 'system',
   last_updated_at   TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
