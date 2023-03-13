@@ -9,6 +9,7 @@ CREATE TABLE main.users (
   full_name           TEXT DEFAULT NULL,
   gender              TEXT DEFAULT NULL,
   access              TEXT NOT NULL,
+  company_id          TEXT,
   created_at          TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
   created_by          TEXT NOT NULL DEFAULT 'system',
   last_updated_at     TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
