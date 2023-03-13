@@ -4,7 +4,7 @@ BEGIN;
 
 CREATE TABLE IF NOT EXISTS main.company (
   id                TEXT NOT NULL PRIMARY KEY,
-  company_name      TEXT NOT NULL,
+  company_name      TEXT UNIQUE NOT NULL,
   company_img       JSONB,
   created_at        TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
   created_by        TEXT NOT NULL DEFAULT 'system',
